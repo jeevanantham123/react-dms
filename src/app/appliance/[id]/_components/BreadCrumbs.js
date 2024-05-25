@@ -13,7 +13,7 @@ function BreadCrumbs({ id }) {
       >
         Devices
       </div>
-      <Image src="/icons/chevron.svg" alt="chevron" width={6} height={10} />
+      <Image src="/icons/Chevron.svg" alt="chevron" width={6} height={10} />
       <div className="text-[12px] text-[#2D3540]"> {id}</div>
     </div>
   );

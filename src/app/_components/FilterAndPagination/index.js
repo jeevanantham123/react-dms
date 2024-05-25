@@ -47,7 +47,7 @@ function FilterAndPagination(searchText = "", onSearch) {
           </div>
           <div className="flex ml-[16px] cursor-pointer gap-[4px] bg-[#E6ECF0] text-[#2D3540] h-[32px] w-[70px] rounded-[8px] text-[12px] font-medium justify-center items-center">
             <Image
-              src="/icons/filter.svg"
+              src="/icons/Filter.svg"
               alt="filter"
               width={14}
               height={14}
@@ -76,7 +76,7 @@ function FilterAndPagination(searchText = "", onSearch) {
           <div className="flex ml-[20px] items-center justify-center">
             <div className="h-[32px] flex justify-center items-center mr-[10px]">
               <Image
-                src="/icons/chevron.svg"
+                src="/icons/Chevron.svg"
                 alt="chevron"
                 className="transform rotate-180"
                 width={7}
@@ -110,7 +110,7 @@ function FilterAndPagination(searchText = "", onSearch) {
 
             <div className="h-[32px] flex justify-center items-center mx-[10px]">
               <Image
-                src="/icons/chevron.svg"
+                src="/icons/Chevron.svg"
                 alt="chevron"
                 width={7}
                 height={11}
