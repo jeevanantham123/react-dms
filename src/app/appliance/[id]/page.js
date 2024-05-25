@@ -6,7 +6,7 @@ import IspAndBilling from "./_components/IspAndBilling";
 export default async function Appliance({ params }) {
   const { id } = params;
   const data = await fetch(
-    `http://localhost:3000/api/v2/appliance/${id}/info`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v2/appliance/${id}/info`,
     {
       cache: "no-store",
     }

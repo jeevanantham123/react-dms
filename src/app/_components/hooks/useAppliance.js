@@ -11,9 +11,12 @@ export const useApplianceList = (query = "") => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch("http://localhost:3000/api/v2/appliances", {
-        cache: "no-store",
-      }).then((data) => data.json());
+      const data = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v2/appliances`,
+        {
+          cache: "no-store",
+        }
+      ).then((data) => data.json());
       setResponse({
         serverError: null,
         applianceData: data || null,
