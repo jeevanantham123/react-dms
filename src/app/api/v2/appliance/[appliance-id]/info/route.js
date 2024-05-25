@@ -3,11 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   try {
-    const pathToJson =
-      process.env.NODE_ENV === "development"
-        ? "/src/app/db.json"
-        : "src/app/db.json";
-    const file = await fs.readFile(process.cwd() + pathToJson, "utf8");
+    const file = await fs.readFile(process.cwd() + "/db.json", "utf8");
     const data = JSON.parse(file);
     const applianceId = params["appliance-id"];
     const filterData = data?.appliances?.filter((appliance) => {
@@ -38,6 +34,7 @@ export async function GET(request, { params }) {
       );
     }
   } catch (error) {
+    console.log("Error: " + error);
     return NextResponse.json(
       {
         httpStatus: 500,
