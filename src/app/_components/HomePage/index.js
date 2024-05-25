@@ -9,15 +9,14 @@ import Table from "../Table";
 export default function HomePage() {
   const { applianceData, serverError, isLoading } = useApplianceList();
 
+  if (serverError) throw new Error("Something went wrong");
+
   if (isLoading || applianceData === undefined)
     return (
       <div className="flex justify-center items-center w-full h-full">
         Loading...
       </div>
     );
-
-  if (!applianceData?.success || serverError)
-    throw new Error("Something went wrong");
 
   const groupedByDownloadStatus = applianceData?.appliances?.reduce(
     (acc, device) => {
