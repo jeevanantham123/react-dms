@@ -9,19 +9,27 @@ import Table from "../Table";
 export default function HomePage() {
   const { applianceData, serverError, isLoading } = useApplianceList();
 
-  if (isLoading || applianceData === undefined) return <h2> Loading.. </h2>;
+  if (isLoading || applianceData === undefined)
+    return (
+      <div className="flex justify-center items-center w-full h-full">
+        Loading...
+      </div>
+    );
 
   if (!applianceData?.success || serverError)
     throw new Error("Something went wrong");
 
-  const groupedByDownloadStatus = applianceData?.data?.reduce((acc, device) => {
-    const status = device.downloadStatus;
-    if (!acc[status]) {
-      acc[status] = 0;
-    }
-    acc[status]++;
-    return acc;
-  }, {});
+  const groupedByDownloadStatus = applianceData?.appliances?.reduce(
+    (acc, device) => {
+      const status = device.downloadStatus;
+      if (!acc[status]) {
+        acc[status] = 0;
+      }
+      acc[status]++;
+      return acc;
+    },
+    {}
+  );
 
   return (
     <>
@@ -29,7 +37,7 @@ export default function HomePage() {
       <div className="p-[24px]">
         <StatusCards data={groupedByDownloadStatus} />
         <FilterAndPagination />
-        <Table data={applianceData?.data} />
+        <Table data={applianceData?.appliances} />
       </div>
     </>
   );

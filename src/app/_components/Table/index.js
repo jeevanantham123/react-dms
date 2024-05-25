@@ -1,6 +1,10 @@
+"use client";
+
 import classNames from "classnames";
+import { useRouter } from "next/navigation";
 
 function Table({ data }) {
+  const router = useRouter();
   const rowWidth = {
     serialNo: "200px",
     location: "350px",
@@ -55,7 +59,7 @@ function Table({ data }) {
           );
         })}
       </div>
-      <div className="bg-white p-[16px]">
+      <div className="bg-white p-[16px] h-[480px] overflow-y-scroll rounded-[4px]">
         {data?.map((row) => {
           return (
             <div
@@ -130,7 +134,10 @@ function Table({ data }) {
                 {row.osVersion}
               </div>
               <div style={{ width: `${rowWidth["action"]}` }}>
-                <div className="bg-[#E6ECF0] rounded-[6px] cursor-pointer h-[28px] w-[48px] flex justify-center items-center text-[12px] text-[#2D3540] font-medium">
+                <div
+                  className="bg-[#E6ECF0] rounded-[6px] cursor-pointer h-[28px] w-[48px] flex justify-center items-center text-[12px] text-[#2D3540] font-medium"
+                  onClick={() => router.push(`/appliance/${row?.serialNo}`)}
+                >
                   View
                 </div>
               </div>

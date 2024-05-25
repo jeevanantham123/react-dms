@@ -1,4 +1,7 @@
 import "./globals.css";
+import { Commissioner } from "next/font/google";
+
+const commissioner = Commissioner({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Qube Cinema",
@@ -8,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={commissioner.className}>
         <div className="bg-[#F5F8FA] w-[100%] h-[100vh]">{children}</div>
       </body>
     </html>

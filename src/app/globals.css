@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Commissioner";
   src: url("/assets/fonts/Commissioner-Regular.ttf") format("ttf"),
     url("/assets/fonts/Commissioner-Regular.ttf") format("ttf");
@@ -42,8 +42,8 @@
 
 html,
 body {
-  font-family: "Commissioner", sans-serif;
-}
+  font-family: "Commissioner";
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {

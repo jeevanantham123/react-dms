@@ -13,7 +13,7 @@ export async function GET(request, { params }) {
       return NextResponse.json(
         {
           success: true,
-          data: filterData,
+          data: filterData[0],
         },
         { status: 200 }
       );

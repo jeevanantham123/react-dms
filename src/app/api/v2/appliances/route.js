@@ -1,14 +1,32 @@
 import { promises as fs } from "fs";
 import { NextResponse } from "next/server";
 
+function removeKeys(obj, keysToRemove) {
+  const newObj = { ...obj };
+  keysToRemove.forEach((key) => delete newObj[key]);
+  return newObj;
+}
+
 export async function GET(request) {
   try {
     const file = await fs.readFile(process.cwd() + "/db.json", "utf8");
     const data = JSON.parse(file);
+
+    const keysToRemove = [
+      "planStartDate",
+      "billingCycle",
+      "ispPaymentResponsibility",
+      "storage",
+    ];
+
+    const newData = data?.appliances?.map((appliance) =>
+      removeKeys(appliance, keysToRemove)
+    );
+
     return NextResponse.json(
       {
         success: true,
-        data: data?.appliances,
+        appliances: newData,
       },
       { status: 200 }
     );

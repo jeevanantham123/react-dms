@@ -1,20 +1,6 @@
 {
   "appliances": [
     {
-      "serialNo": "JTD-512312",
-      "theatreName": "Kriplle Square",
-      "location": {
-        "city": "New Delhi",
-        "state": "Delhi",
-        "country": "India"
-      },
-      "bandwidth": "1 Gbps",
-      "avgBandwidth": "812 Kbps",
-      "deviceStatus": "Offline",
-      "downloadStatus": "Cancelled",
-      "osVersion": "5.2.1.3"
-    },
-    {
       "serialNo": "JTD-512313",
       "theatreName": "Kriplle Square",
       "location": {
@@ -22,39 +8,195 @@
         "state": "Delhi",
         "country": "India"
       },
+      "ispPaymentResponsibility": "Qube",
       "bandwidth": "1 Gbps",
       "avgBandwidth": "812 Kbps",
+      "planStartDate": "2023-10-01T10:00:00Z",
+      "billingCycle": "Monthly",
+      "deviceStatus": "Offline",
+      "downloadStatus": "Failed",
+      "osVersion": "5.2.1.3",
+      "storage": "828 GB"
+    },
+    {
+      "serialNo": "JTD-512314",
+      "theatreName": "Central Cinema",
+      "location": {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP XYZ",
+      "bandwidth": "2 Gbps",
+      "avgBandwidth": "600 Kbps",
+      "planStartDate": "2023-09-15T09:00:00Z",
+      "billingCycle": "Yearly",
+      "deviceStatus": "Online",
+      "downloadStatus": "Stalled",
+      "osVersion": "6.0.0",
+      "storage": "512 GB"
+    },
+    {
+      "serialNo": "JTD-512315",
+      "theatreName": "Galaxy Cinemas",
+      "location": {
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP ABC",
+      "bandwidth": "500 Mbps",
+      "avgBandwidth": "300 Kbps",
+      "planStartDate": "2023-11-20T08:00:00Z",
+      "billingCycle": "Quarterly",
+      "deviceStatus": "Offline",
+      "downloadStatus": "Archived",
+      "osVersion": "7.1.0",
+      "storage": "1 TB"
+    },
+    {
+      "serialNo": "JTD-512316",
+      "theatreName": "Metropolis Theatre",
+      "location": {
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP DEF",
+      "bandwidth": "100 Mbps",
+      "avgBandwidth": "50 Kbps",
+      "planStartDate": "2023-12-10T15:00:00Z",
+      "billingCycle": "Monthly",
       "deviceStatus": "Offline",
       "downloadStatus": "Scheduled",
-      "osVersion": "5.2.1.3"
+      "osVersion": "8.0.0",
+      "storage": "2 TB"
     },
     {
-      "serialNo": "JTD-512313",
-      "theatreName": "Kriplle Square",
+      "serialNo": "JTD-512317",
+      "theatreName": "Raj Cinema",
       "location": {
-        "city": "New Delhi",
-        "state": "Delhi",
+        "city": "Jaipur",
+        "state": "Rajasthan",
         "country": "India"
       },
-      "bandwidth": "1 Gbps",
-      "avgBandwidth": "812 Kbps",
+      "ispPaymentResponsibility": "ISP GHI",
+      "bandwidth": "10 Gbps",
+      "avgBandwidth": "9.5 Gbps",
+      "planStartDate": "2023-08-05T12:00:00Z",
+      "billingCycle": "Monthly",
+      "deviceStatus": "Online",
+      "downloadStatus": "Cancelled",
+      "osVersion": "9.0.0",
+      "storage": "256 GB"
+    },
+    {
+      "serialNo": "JTD-512318",
+      "theatreName": "Starlight Cinema",
+      "location": {
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP JKL",
+      "bandwidth": "500 Mbps",
+      "avgBandwidth": "400 Mbps",
+      "planStartDate": "2023-07-20T14:00:00Z",
+      "billingCycle": "Yearly",
       "deviceStatus": "Offline",
-      "downloadStatus": "Downloading",
-      "osVersion": "5.2.1.3"
+      "downloadStatus": "Unarchiving",
+      "osVersion": "10.0.0",
+      "storage": "1.5 TB"
     },
     {
-      "serialNo": "JTD-512313",
-      "theatreName": "Kriplle Square",
+      "serialNo": "JTD-512319",
+      "theatreName": "Dreamland Theatre",
       "location": {
-        "city": "New Delhi",
-        "state": "Delhi",
+        "city": "Kolkata",
+        "state": "West Bengal",
         "country": "India"
       },
+      "ispPaymentResponsibility": "ISP MNO",
       "bandwidth": "1 Gbps",
-      "avgBandwidth": "812 Kbps",
+      "avgBandwidth": "900 Mbps",
+      "planStartDate": "2023-06-25T16:00:00Z",
+      "billingCycle": "Monthly",
+      "deviceStatus": "Online",
+      "downloadStatus": "Downloading",
+      "osVersion": "11.0.0",
+      "storage": "512 GB"
+    },
+    {
+      "serialNo": "JTD-512320",
+      "theatreName": "Cinepolis",
+      "location": {
+        "city": "Pune",
+        "state": "Maharashtra",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP PQR",
+      "bandwidth": "100 Mbps",
+      "avgBandwidth": "80 Mbps",
+      "planStartDate": "2023-05-30T17:00:00Z",
+      "billingCycle": "Monthly",
       "deviceStatus": "Offline",
       "downloadStatus": "Downloaded",
-      "osVersion": "5.2.1.3"
+      "osVersion": "12.0.0",
+      "storage": "4 TB"
+    },
+    {
+      "serialNo": "JTD-512321",
+      "theatreName": "Silver Screen",
+      "location": {
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP STU",
+      "bandwidth": "1 Gbps",
+      "avgBandwidth": "850 Mbps",
+      "planStartDate": "2023-04-15T18:00:00Z",
+      "billingCycle": "Quarterly",
+      "deviceStatus": "Offline",
+      "downloadStatus": "Cancelled",
+      "osVersion": "13.0.0",
+      "storage": "128 GB"
+    },
+    {
+      "serialNo": "JTD-512322",
+      "theatreName": "Regal Cinemas",
+      "location": {
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP VWX",
+      "bandwidth": "500 Mbps",
+      "avgBandwidth": "450 Mbps",
+      "planStartDate": "2023-03-10T19:00:00Z",
+      "billingCycle": "Yearly",
+      "deviceStatus": "Online",
+      "downloadStatus": "Unarchiving",
+      "osVersion": "14.0.0",
+      "storage": "256 GB"
+    },
+    {
+      "serialNo": "JTD-512323",
+      "theatreName": "PVR Cinemas",
+      "location": {
+        "city": "Chandigarh",
+        "state": "Punjab",
+        "country": "India"
+      },
+      "ispPaymentResponsibility": "ISP YZ",
+      "bandwidth": "100 Mbps",
+      "avgBandwidth": "70 Mbps",
+      "planStartDate": "2023-02-05T20:00:00Z",
+      "billingCycle": "Monthly",
+      "deviceStatus": "Online",
+      "downloadStatus": "Scheduled",
+      "osVersion": "15.0.0",
+      "storage": "2 TB"
     }
   ]
 }

@@ -36,6 +36,7 @@ function FilterAndPagination(searchText = "", onSearch) {
             <Image
               src="/icons/search.svg"
               alt="search"
+              className="cursor-pointer"
               width={14}
               height={14}
               onClick={(e) => {
@@ -44,7 +45,7 @@ function FilterAndPagination(searchText = "", onSearch) {
               }}
             />
           </div>
-          <div className="flex ml-[16px] gap-[4px] bg-[#E6ECF0] text-[#2D3540] h-[32px] w-[70px] rounded-[8px] text-[12px] font-medium justify-center items-center">
+          <div className="flex ml-[16px] cursor-pointer gap-[4px] bg-[#E6ECF0] text-[#2D3540] h-[32px] w-[70px] rounded-[8px] text-[12px] font-medium justify-center items-center">
             <Image
               src="/icons/filter.svg"
               alt="filter"
@@ -91,7 +92,7 @@ function FilterAndPagination(searchText = "", onSearch) {
                 <div
                   key={pageNumber}
                   className={classNames(
-                    "h-[32px] flex mt-[2px] cursor-pointer text-[12px] font-medium text-black justify-center items-center w-[32px]",
+                    "h-[32px] flex cursor-pointer text-[12px] font-medium text-black justify-center items-center w-[32px]",
                     {
                       "bg-[#EBF5FF] border border-[#084782] rounded-[8px]":
                         activeNum === pageNumber,
