@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   try {
-    const file = await fs.readFile(process.cwd() + "/db.json", "utf8");
+    const file = await fs.readFile(process.cwd() + "/src/app/db.json", "utf8");
     const data = JSON.parse(file);
     const applianceId = params["appliance-id"];
     const filterData = data?.appliances?.filter((appliance) => {

@@ -9,7 +9,7 @@ function removeKeys(obj, keysToRemove) {
 
 export async function GET(request) {
   try {
-    const file = await fs.readFile(process.cwd() + "/db.json", "utf8");
+    const file = await fs.readFile(process.cwd() + "/src/app/db.json", "utf8");
     const data = JSON.parse(file);
 
     const keysToRemove = [
