@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import FilterAndPagination from "../FilterAndPagination";
 import { useApplianceList } from "../hooks/useAppliance";
 import Navbar from "../Navbar";
@@ -7,16 +8,15 @@ import StatusCards from "../StatusCards";
 import Table from "../Table";
 
 export default function HomePage() {
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState("");
+  const [limit, setLimit] = useState("");
+  const [deviceStatus, setDeviceStatus] = useState("");
+  const [downloadStatus, setDownloadStatus] = useState("");
+
   const { applianceData, serverError, isLoading } = useApplianceList();
 
   if (serverError) throw new Error("Something went wrong");
-
-  if (isLoading || applianceData === undefined)
-    return (
-      <div className="flex justify-center items-center w-full h-full">
-        Loading...
-      </div>
-    );
 
   const groupedByDownloadStatus = applianceData?.appliances?.reduce(
     (acc, device) => {
@@ -35,8 +35,8 @@ export default function HomePage() {
       <Navbar />
       <div className="p-[24px]">
         <StatusCards data={groupedByDownloadStatus} />
-        <FilterAndPagination />
-        <Table data={applianceData?.appliances} />
+        <FilterAndPagination isLoading={isLoading} />
+        <Table data={applianceData?.appliances} isLoading={isLoading} />
       </div>
     </>
   );

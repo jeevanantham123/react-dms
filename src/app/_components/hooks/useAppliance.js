@@ -2,7 +2,13 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 
-export const useApplianceList = (query = "") => {
+export const useApplianceList = (
+  query = "",
+  downloadStatus,
+  deviceStatus,
+  limit,
+  page
+) => {
   const [response, setResponse] = useState({
     isLoading: false,
     applianceData: undefined,
