@@ -1,6 +1,12 @@
 import classNames from "classnames";
 
-function StatusCards({ data }) {
+function StatusCards({ data, isLoading }) {
+  if (isLoading || data === undefined)
+    return (
+      <div className="flex justify-center items-center w-full h-[56px]">
+        Loading...
+      </div>
+    );
   return (
     <div className="h-[56px] rounded-[8px] bg-white px-[25px] flex gap-[16px] items-center">
       {Object.keys(data).map((status) => {
