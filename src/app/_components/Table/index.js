@@ -2,9 +2,26 @@
 
 import classNames from "classnames";
 import { useRouter } from "next/navigation";
+import { useApplianceList } from "../hooks/useAppliance";
+import { useEffect } from "react";
 
-function Table({ data, isLoading }) {
+function Table({ filters, setFilters, setTotal, setData }) {
   const router = useRouter();
+  const { applianceData, serverError, isLoading } = useApplianceList(
+    filters?.searchText,
+    filters?.limit,
+    filters?.page,
+    filters?.deviceStatus
+  );
+  const data = applianceData?.appliances || undefined;
+
+  useEffect(() => {
+    if (applianceData) {
+      setTotal(applianceData?.total);
+      setData(applianceData?.appliances);
+    }
+  }, [applianceData]);
+
   const rowWidth = {
     serialNo: "200px",
     location: "350px",

@@ -10,9 +10,9 @@ function removeKeys(obj, keysToRemove) {
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const deviceStatus = searchParams.get("deviceStatus");
-    const downloadStatus = searchParams.get("downloadStatus");
-    const searchQuery = searchParams.get("q");
+    const deviceStatus = searchParams.get("deviceStatus") || null;
+    const downloadStatus = searchParams.get("downloadStatus") || null;
+    const searchQuery = searchParams.get("query") || null;
     const page = parseInt(searchParams.get("page")) || 1;
     const limit = parseInt(searchParams.get("limit")) || 10;
 
@@ -69,6 +69,7 @@ export async function GET(request) {
         limit,
         total: appliances.length,
         totalPages: Math.ceil(appliances.length / limit),
+        searchQuery: searchQuery,
       },
       { status: 200 }
     );

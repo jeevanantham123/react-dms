@@ -2,13 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 
-export const useApplianceList = (
-  query = "",
-  downloadStatus,
-  deviceStatus,
-  limit,
-  page
-) => {
+export const useApplianceList = (query = "", limit, page, deviceStatus) => {
   const [response, setResponse] = useState({
     isLoading: false,
     applianceData: undefined,
@@ -18,7 +12,13 @@ export const useApplianceList = (
   const fetchData = async () => {
     try {
       const data = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/v2/appliances`,
+        `${
+          process.env.NEXT_PUBLIC_API_URL
+        }/api/v2/appliances?query=${encodeURIComponent(
+          query
+        )}&limit=${limit}&page=${page}&deviceStatus=${encodeURIComponent(
+          deviceStatus
+        )}`,
         {
           cache: "no-store",
         }
@@ -44,7 +44,7 @@ export const useApplianceList = (
     });
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [query, limit, page, deviceStatus]);
 
   return { ...response };
 };
